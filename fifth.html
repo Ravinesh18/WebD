@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms and Input Tags</title>
+</head>
+
+<body>
+    <h3>Html Forms</h3>
+    <!-- We can use forms in html  -->
+    <form action="">
+        <!-- div tag is used to divide the lines -->
+        <!-- We have different attributes in the Input Tag to enter date , text, email , checkboxes ,  etc -->
+        <!-- We use Label tag as when we click on the name its selects the area to write text  -->
+        <label for="name"> Name :</label>
+        <div><input type="text" name="Myname" id="name"></div><br>
+        <div>Roll No : <input type="text" name="Myrollno"></div><br>
+        <div>Email : <input type="email" name="Myemail" id=""></div><br>
+        <div>DOB : <input type="date" name="Mydate" id=""></div><br>
+        <!-- We can check or uncheck the box by default -->
+        <div>Are you Eligible : <input type="checkbox" name="myeligibility" id="" checked></div><br>
+        <div>Gender : Male<input type="radio" name="Mygender" id=""> Female : <input type="radio" name="Mygender" id="">
+        </div>
+        <div> Write about yourself : <br><textarea name="mytext" id="" cols="30" rows="10"></textarea>
+        </div>
+        <!-- We can also use lable to have option like column -->
+        <label for="mycar">Car </label>
+        <select name="car" id="mycar">
+            <option value="ind" selected>Indica </option>
+            <option value="swf">Swift</option>
+        </select>
+        <div><input type="submit" value="Submit Now"></div>
+        <div><input type="reset" value="Reset"></div>
+    </form>
+</body>
+
+</html>
