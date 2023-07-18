@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility & Z-index</title>
+    <style>
+        /* display:none; - It completely removes an HTML tag from the web page like it was never there. */
+        /* visibility:hidden;  - It makes the tag invisible but will not remove the element, and it will still occupy the space on the page. */
+        .box {
+            width: 170px;
+            height: 170px;
+            border: 2px solid black;
+        }
+
+        #box1 {
+            background-color: green;
+            position: relative;
+            top: 49px;
+            z-index: -35;
+        }
+
+        /*  Now, try to answer this question: What if one box overlaps the other? Which box will be visible to the user? This is where z-index property comes into the picture. So, whenever HTML elements collapse with each other, then the element with smaller z-index value will be covered by the element with larger z-index value.
+        Note: Z-index does not work on static position value. It only works on the elements with position: relative, absolute, fixed, or sticky.   */
+        #box2 {
+            background-color: red;
+            position: relative;
+            top: 14px;
+            /* z-index  will work only for position: relative, absolute, fixed or sticky; */
+            z-index: -165;
+            /* will hide the element and the space */
+            /* display: none;  */
+            /* will hide the element but will show its empty space */
+            /* visibility:hidden;  */
+
+        }
+
+        #box3 {
+            background-color: blue;
+        }
+
+        #box4 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+
+</html>
